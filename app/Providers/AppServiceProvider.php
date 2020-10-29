@@ -2,10 +2,15 @@
 
 namespace App\Providers;
 
+use App\Company;
+use App\Customer;
+use App\Division;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+
+
     /**
      * Register any application services.
      *
@@ -23,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        view()->share([
+            'companies' => Company::all(),
+//            'divisions' => Division::all()
+        ]);
+
     }
 }

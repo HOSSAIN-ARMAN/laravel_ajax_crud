@@ -30,3 +30,8 @@ Route::get('customer.show', 'CustomerController@show');
 Route::get('customer.show/{id?}', 'CustomerController@get')->name('customer.show');
 
 
+
+Route::get('division/{id?}', 'DivisionController@getCityBydivision')->name('division');
+Route::get('division.city/{id?}/{division_id?}', 'DivisionController@getAreaByCity')->name('division.city');
+
+
